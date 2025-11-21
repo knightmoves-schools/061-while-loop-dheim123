@@ -1,11 +1,13 @@
 function markAsDone(todos) {
-  for (let i = 0; i < todos.length; i++) {
+  let i = 0;
+
+  while (i < todos.length) {
     if (!todos[i].description.startsWith('done - ')) {
       todos[i].description = 'done - ' + todos[i].description;
     }
+    
+    i++;
   }
+
   return todos;
 }
-
-
-
